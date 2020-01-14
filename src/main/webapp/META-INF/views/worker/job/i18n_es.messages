@@ -1,0 +1,15 @@
+# i18n_es.messages
+
+worker.job.form.label.referenceNumber = Número de referencia:
+worker.job.form.label.title = Título:
+worker.job.form.label.deadline = Fecha límite:
+worker.job.form.label.salary = Salario:
+worker.job.form.label.link = Enlace:
+worker.job.form.label.description = Descripción:
+
+worker.job.form.button.application.create = Crear petición
+worker.job.form.button.return = Volver
+
+worker.job.list.referenceNumber = Número de referencia
+worker.job.list.title = Título
+worker.job.list.deadline = Fecha límite

@@ -1,0 +1,31 @@
+#Employer Job
+
+#List.jsp
+
+employer.job.list.label.reference = Referencia
+employer.job.list.label.deadline = Fecha límite
+employer.job.list.label.title = Titulo
+
+#Form.jsp
+
+employer.job.form.ref-placeholder = Recomendación: EEEE-TTTT , donde “EEEE” ayuda a identificar al Empleador y “TTTT” el Trabajo
+employer.job.form.label.reference = Referencia:
+employer.job.form.label.deadline = Fecha límite:
+employer.job.form.label.title = Título:
+employer.job.form.label.salary = Salario:
+employer.job.form.label.link = Enlace:
+employer.job.form.label.description = Descripción:
+employer.job.form.label.status = Estado:
+employer.job.form.label.draft= Borrador (desmarcar para publicar el trabajo en modo final)
+
+employer.job.form.button.create = Crear
+employer.job.form.button.update = Actualizar
+employer.job.form.button.delete = Eliminar
+employer.job.form.button.return = Volver
+
+employer.job.error.no-apps = No se puede eliminar, el trabajo tiene solicitudes
+employer.job.error.past-deadline = La fecha límite debe ser futura
+employer.job.error.unique-reference = Esta referencia ya existe
+employer.job.error.draft = Un trabajo publicado no puede ser modificado
+employer.job.error.percentage = Las tareas no pueden sumar más del 100% de la carga de trabajo semanal
+employer.job.error.spam = Este trabajo se considera spam, por lo que no puede ser publicado

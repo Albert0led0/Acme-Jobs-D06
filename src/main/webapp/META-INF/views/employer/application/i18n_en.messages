@@ -1,0 +1,26 @@
+#Employer Application
+
+#List.jsp
+
+employer.application.list.label.reference = Reference
+employer.application.list.label.moment = Moment
+employer.application.list.label.status = Status
+
+#Form.jsp
+
+employer.application.form.label.reference = Reference
+employer.application.form.label.moment = Moment
+employer.application.form.label.status = Status
+employer.application.form.label.skills= Skills
+employer.application.form.label.statement = Statements
+employer.application.form.label.qualifications = Qualifications
+employer.application.form.button.return = Return
+
+employer.application.form.label.pending = Pending
+employer.application.form.label.accepted = Accepted
+employer.application.form.label.rejected = Rejected
+employer.application.form.label.justification = Justification
+employer.application.form.button.update = Update
+employer.application.form.label.job = Job reference
+
+employer.application.error.justification = A justification must be provided if the application is rejected 

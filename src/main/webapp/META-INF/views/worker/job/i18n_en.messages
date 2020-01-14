@@ -1,0 +1,15 @@
+# i18n_en.messages
+
+worker.job.form.label.referenceNumber = Reference Number:
+worker.job.form.label.title = Title:
+worker.job.form.label.deadline = Deadline:
+worker.job.form.label.salary = Salary:
+worker.job.form.label.link = Link:
+worker.job.form.label.description = Description:
+
+worker.job.form.button.application.create = Create application
+worker.job.form.button.return = Return
+
+worker.job.list.referenceNumber = Reference Number
+worker.job.list.title = Title
+worker.job.list.deadline = Deadline

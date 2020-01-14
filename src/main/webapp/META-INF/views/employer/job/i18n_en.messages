@@ -1,0 +1,31 @@
+#Employer Job
+
+#List.jsp
+
+employer.job.list.label.reference = Reference
+employer.job.list.label.deadline = Deadline
+employer.job.list.label.title = Title
+
+#Form.jsp
+
+employer.job.form.ref-placeholder = Recommended: EEEE-JJJJ , where “EEEE” helps recognise the employer and “JJJJ” the job
+employer.job.form.label.reference = Reference:
+employer.job.form.label.deadline = Deadline:
+employer.job.form.label.title = Title:
+employer.job.form.label.salary = Salary:
+employer.job.form.label.link = Link:
+employer.job.form.label.description = Description:
+employer.job.form.label.status = Status:
+employer.job.form.label.draft= Draft (uncheck to publish the job as final mode)
+
+employer.job.form.button.create = Create
+employer.job.form.button.update = Update
+employer.job.form.button.delete = Delete
+employer.job.form.button.return = Return
+
+employer.job.error.no-apps = Cannot be deleted, job has applications
+employer.job.error.past-deadline = Deadline must be future
+employer.job.error.unique-reference = This reference already exists
+employer.job.error.draft = A published job cannot be modified
+employer.job.error.percentage = The duties cannot sum up to over 100% of the weekly workload
+employer.job.error.spam = This job is considered spam, therefore it cannot be published
