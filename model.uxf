@@ -634,12 +634,14 @@ bg=blue</panel_attributes>
       <x>1647</x>
       <y>135</y>
       <w>288</w>
-      <h>63</h>
+      <h>81</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 CommercialBanner
 --
-+ creditCard: String{CreditCardNumber,NotBlank}</panel_attributes>
++ creditCard: String{CreditCardNumber,NotBlank}
++ cvv: String{NotBlank}
++ expirationDate: Date{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>
   <element>

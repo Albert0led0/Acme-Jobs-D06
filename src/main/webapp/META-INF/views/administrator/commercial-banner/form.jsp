@@ -8,6 +8,8 @@
 	<acme:form-textbox code="administrator.commercial-banner.form.label.slogan" path="slogan"/>	
 	<acme:form-url code="administrator.commercial-banner.form.label.target-url" path="targetURL"/>
 	<acme:form-textbox code="administrator.commercial-banner.form.label.credit-card" path="creditCard"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.cvv" path="cvv"/>
+	<acme:form-textbox code="administrator.commercial-banner.form.label.expiration-date" path="expirationDate"/>
 	
 	<acme:form-submit test="${command == 'show'}"
 		code="administrator.commercial-banner.form.button.update"
