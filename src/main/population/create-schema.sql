@@ -86,7 +86,7 @@
         `pictureurl` varchar(255),
         `slogan` varchar(255),
         `targeturl` varchar(255),
-        `credit_card` varchar(255),
+        `credit_card_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -120,6 +120,15 @@
         `user_account_id` integer,
         `company` varchar(255),
         `sector` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `credit_card` (
+       `id` integer not null,
+        `version` integer not null,
+        `cvv` varchar(255),
+        `expiration_date` datetime(6),
+        `number` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -225,6 +234,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `sponsor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `organisation` varchar(255),
+        `credit_card_id` integer,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `toledo_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -305,6 +323,11 @@ create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status` desc);
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
+    alter table `commercial_banner` 
+       add constraint `FKfp0yot74q1m8ofbclq3nlfidw` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
+
     alter table `consumer` 
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
@@ -327,6 +350,16 @@ create index IDX2q2747fhp099wkn3j2yt05fhs on `application` (`status` desc);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
+    alter table `sponsor` 
+       add constraint `FK28mvxtnmfjcwiw34vs8ryqkpa` 
+       foreign key (`credit_card_id`) 
+       references `credit_card` (`id`);
+
+    alter table `sponsor` 
+       add constraint FK_20xk0ev32hlg96kqynl6laie2 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 

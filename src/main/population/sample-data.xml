@@ -257,6 +257,40 @@
 	<bean name="workerAuthenticated4" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="workerUserAccount4" />
 	</bean>
+	
+	
+	<!-- Sponsor -->
+	
+	<bean name="sponsorUserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="sponsor" />
+		<property name="password" value="sponsor" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Sponsor" />
+				<property name="surname" value="Acme" />
+				<property name="email" value="sponsor@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="sponsorSponsor" />
+				<ref bean="sponsorAuthenticated" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="sponsorSponsor" class="acme.entities.roles.Sponsor">
+		<property name="userAccount" ref="sponsorUserAccount" />
+		<property name="organisation" value="AcmeSponsor01" />
+		<property name="creditCard">
+			<ref bean="CreditCard2"/>
+		</property>
+	</bean>
+	
+	<bean name="sponsorAuthenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="sponsorUserAccount" />
+	</bean>
 
 	<!-- BonaciniBulletins -->
 	
@@ -614,14 +648,18 @@
 		<property name="pictureURL" value="https://www.clipartwiki.com/clipimg/detail/155-1551208_text-banner-png-transparent-picture-background-banner-orange.png" />
 		<property name="slogan" value="This is a commercial banner example" />
 		<property name="targetURL" value="http://example.com/" />
-		<property name="creditCard" value="4466233071138248" />
+		<property name="creditCard">
+			<ref bean = "CreditCard1"/>
+		</property>
 	</bean>
 	
 	<bean id="CommercialBanner02" class="acme.entities.banners.CommercialBanner">
 		<property name="pictureURL" value="https://www.antevenio.com/usa/wp-content/uploads/2018/05/20-ejemplos-de-banners-creativos.jpg" />
 		<property name="slogan" value="This is another commercial banner example" />
 		<property name="targetURL" value="https://es.wikipedia.org/wiki/Wikipedia:Portada" />
-		<property name="creditCard" value="4928129094115167" />
+		<property name="creditCard">
+			<ref bean = "CreditCard2"/>
+		</property>
 	</bean>
 	
 	<bean id="NonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
@@ -1147,6 +1185,28 @@
 		<property name="worker" ref="workerWorker4" />
 		<property name="job" ref="Job12" />
 	</bean>
+	
+	<bean id="CreditCard1" class="acme.entities.creditCards.CreditCard">
+		<property name="number" value="4466233071138248" />
+		<property name="cvv" value="012" />
+		<property name="expirationDate" value="2020/11/12 00:00" />
+	
+	</bean>
+	
+	<bean id="CreditCard2" class="acme.entities.creditCards.CreditCard">
+		<property name="number" value="4928129094115167" />
+		<property name="cvv" value="652" />
+		<property name="expirationDate" value="2021/11/05 00:00" />
+	
+	</bean>
+	
+	<!-- <bean id="CreditCard3" class="acme.entities.creditCards.CreditCard">
+		<property name="number" value="4496133071438249" />
+		<property name="cvv" value="273" />
+		<property name="expirationDate" value="01/02/2023 00:00" />
+	
+	</bean> -->
+	
 	
 	
 </beans>

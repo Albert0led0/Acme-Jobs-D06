@@ -19,6 +19,10 @@
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
 
+    alter table `commercial_banner` 
+       drop 
+       foreign key `FKfp0yot74q1m8ofbclq3nlfidw`;
+
     alter table `consumer` 
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
@@ -38,6 +42,14 @@
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
+
+    alter table `sponsor` 
+       drop 
+       foreign key `FK28mvxtnmfjcwiw34vs8ryqkpa`;
+
+    alter table `sponsor` 
+       drop 
+       foreign key FK_20xk0ev32hlg96kqynl6laie2;
 
     alter table `worker` 
        drop 
@@ -67,6 +79,8 @@
 
     drop table if exists `consumer`;
 
+    drop table if exists `credit_card`;
+
     drop table if exists `duty`;
 
     drop table if exists `employer`;
@@ -84,6 +98,8 @@
     drop table if exists `provider`;
 
     drop table if exists `request`;
+
+    drop table if exists `sponsor`;
 
     drop table if exists `toledo_bulletin`;
 

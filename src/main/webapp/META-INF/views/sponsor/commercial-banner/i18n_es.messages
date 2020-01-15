@@ -1,0 +1,12 @@
+sponsor.commercial-banner.form.label.picture-url = URL de la imagen:
+sponsor.commercial-banner.form.label.slogan = Eslogan:
+sponsor.commercial-banner.form.label.target-url = URL del objetivo:
+sponsor.commercial-banner.form.label.credit-card = Tarjeta de crédito:
+sponsor.commercial-banner.form.button.create = Crear
+sponsor.commercial-banner.form.button.update = Actualizar
+sponsor.commercial-banner.form.button.delete = Eliminar
+sponsor.commercial-banner.form.button.return = Volver
+
+sponsor.commercial-banner.list.label.picture-url = URL de la imagen
+sponsor.commercial-banner.list.label.slogan = Eslogan
+sponsor.commercial-banner.list.label.target-url = URL del objetivo
