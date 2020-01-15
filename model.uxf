@@ -640,7 +640,7 @@ bg=blue</panel_attributes>
 CommercialBanner
 --
 + creditCard: String{CreditCardNumber,NotBlank}
-+ cvv: Integer{NotNull,Max(999)}
++ cvv: String{NotBlank}
 + expirationDate: Date{NotNull}</panel_attributes>
     <additional_attributes/>
   </element>

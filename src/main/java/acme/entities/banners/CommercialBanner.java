@@ -4,9 +4,9 @@ package acme.entities.banners;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.CreditCardNumber;
 
@@ -28,9 +28,9 @@ public class CommercialBanner extends Banner {
 	@CreditCardNumber
 	private String				creditCard;
 
-	@NotNull
-	@Max(999)
-	private Integer				cvv;
+	@NotBlank
+	@Pattern(regexp = "^[0-9]{3}$")
+	private String				cvv;
 
 	@NotNull
 	private Date				expirationDate;
