@@ -615,6 +615,8 @@
 		<property name="slogan" value="This is a commercial banner example" />
 		<property name="targetURL" value="http://example.com/" />
 		<property name="creditCard" value="4466233071138248" />
+		<property name="cvv" value="387" />
+		<property name="expirationDate" value="2028/09/22 00:00" />
 	</bean>
 	
 	<bean id="CommercialBanner02" class="acme.entities.banners.CommercialBanner">
@@ -622,6 +624,8 @@
 		<property name="slogan" value="This is another commercial banner example" />
 		<property name="targetURL" value="https://es.wikipedia.org/wiki/Wikipedia:Portada" />
 		<property name="creditCard" value="4928129094115167" />
+		<property name="cvv" value="872" />
+		<property name="expirationDate" value="2030/10/01 00:00" />
 	</bean>
 	
 	<bean id="NonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
