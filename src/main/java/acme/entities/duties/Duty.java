@@ -27,7 +27,7 @@ public class Duty extends DomainEntity {
 	@NotBlank
 	private String				description;
 
-	@Range(min = 0, max = 1)
+	@Range(min = 0, max = 100)
 	private double				timePercentage;
 
 	//relaciones

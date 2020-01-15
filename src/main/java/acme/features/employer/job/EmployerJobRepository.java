@@ -29,7 +29,7 @@ public interface EmployerJobRepository extends AbstractRepository {
 	@Query("select count(j)>0 from Job j where j.referenceNumber = ?1")
 	Boolean checkUniqueReference(String referenceNumber);
 
-	@Query("select sum(d.timePercentage)<=1.0 from Duty d where d.job.id = ?1")
+	@Query("select sum(d.timePercentage)<=100.0 from Duty d where d.job.id = ?1")
 	Boolean timePercentageSum(int jobId);
 
 	@Query("select d from Duty d where d.job.id = ?1")

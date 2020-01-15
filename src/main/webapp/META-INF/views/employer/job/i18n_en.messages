@@ -18,14 +18,17 @@ employer.job.form.label.description = Description:
 employer.job.form.label.status = Status:
 employer.job.form.label.draft= Draft (uncheck to publish the job as final mode)
 
-employer.job.form.button.create = Create
-employer.job.form.button.update = Update
-employer.job.form.button.delete = Delete
-employer.job.form.button.return = Return
+employer.duty.form.button.new-duty	= New duty
+employer.job.form.button.duties		= Duties
+employer.job.form.button.create 	= Create
+employer.job.form.button.update 	= Update
+employer.job.form.button.delete 	= Delete
+employer.job.form.button.return 	= Return
 
 employer.job.error.no-apps = Cannot be deleted, job has applications
 employer.job.error.past-deadline = Deadline must be future
 employer.job.error.unique-reference = This reference already exists
 employer.job.error.draft = A published job cannot be modified
 employer.job.error.percentage = The duties cannot sum up to over 100% of the weekly workload
+employer.job.error.no-duties	= A job must have at least one duty to be publishable
 employer.job.error.spam = This job is considered spam, therefore it cannot be published

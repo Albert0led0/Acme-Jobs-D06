@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.duties.Duty;
 import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
@@ -103,14 +104,21 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 				errors.state(request, this.repository.timePercentageSum(entity.getId()), "description", "employer.job.error.percentage");
 			}
 
+			if (this.repository.findJobDuties(entity.getId()).isEmpty()) {
+				errors.state(request, false, "description", "employer.job.error.no-duties");
+			}
+
 			//spam
 			Boolean isSpam = false;
 			String spamWordsAux = "";
-			Double wordCount;
+			Double charCount;
 			Double spamCount = 0d;
 			Double percentage;
 			Double threshold;
 			Boolean nullLink = entity.getLink() == null;
+			Collection<Duty> duties;
+			String dutiesTitle = "";
+			String dutiesDescription = "";
 
 			Collection<String> spamWords1 = this.repository.retrieveSpamWords();
 			List<String> spamWords = spamWords1.stream().collect(Collectors.toList());
@@ -124,9 +132,16 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 			spamWords.addAll(Arrays.asList(spamWordsAux.split(",")));
 			spamWords = spamWords.stream().map(String::trim).collect(Collectors.toList());
 
-			wordCount = 1.0 * entity.getReferenceNumber().length() + entity.getTitle().length() + entity.getDescription().length();
+			duties = this.repository.findJobDuties(entity.getId());
+
+			for (Duty d : duties) {
+				dutiesTitle += d.getTitle();
+				dutiesDescription += d.getDescription();
+			}
+
+			charCount = 1.0 * entity.getReferenceNumber().length() + entity.getTitle().length() + entity.getDescription().length();
 			if (!nullLink) {
-				wordCount += entity.getLink().length();
+				charCount += entity.getLink().length();
 			}
 
 			for (String sw : spamWords) {
@@ -137,10 +152,12 @@ public class EmployerJobUpdateService implements AbstractUpdateService<Employer,
 					loopAux += entity.getLink().toLowerCase().split(sw, -1).length - 1;
 				}
 				loopAux += entity.getDescription().toLowerCase().split(sw, -1).length - 1;
+				loopAux += dutiesTitle.toLowerCase().split(sw, -1).length - 1;
+				loopAux += dutiesDescription.toLowerCase().split(sw, -1).length - 1;
 				spamCount += loopAux * sw.length();
 			}
 
-			percentage = spamCount / wordCount;
+			percentage = spamCount / charCount;
 
 			String language = request.getLocale().getLanguage();
 			threshold = this.repository.retrieveThreshold(language);
