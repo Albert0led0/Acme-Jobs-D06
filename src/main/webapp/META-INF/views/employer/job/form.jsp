@@ -31,6 +31,11 @@
 	</jstl:if>
 	<acme:form-textarea code="employer.job.form.label.description" path="description"/>
 
+	<jstl:if test="${draft == true}">
+		<acme:form-return code="employer.duty.form.button.new-duty" action="/employer/duty/create?jobId=${id}"/>
+	</jstl:if>
+	<acme:form-return code="employer.job.form.button.duties" action="/employer/duty/list?jobId=${id}"/>
+	
 	<acme:form-submit test="${command == 'show'}"
 		code="employer.job.form.button.update" action="update"/>
 	<acme:form-submit test="${command == 'show'}"

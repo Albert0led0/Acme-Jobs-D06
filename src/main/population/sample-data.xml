@@ -888,126 +888,126 @@
 	<bean id="Duty01" class="acme.entities.duties.Duty">
 		<property name="title" value="Título01" />
 		<property name="description" value="Descripción01" />
-		<property name="timePercentage" value="0.1" />
+		<property name="timePercentage" value="10" />
 		<property name="job" ref="Job06"/>
 	</bean>
 
 	<bean id="Duty02" class="acme.entities.duties.Duty">
 		<property name="title" value="Título02" />
 		<property name="description" value="Descripción02" />
-		<property name="timePercentage" value="0.2" />
+		<property name="timePercentage" value="20" />
 		<property name="job" ref="Job01"/>
 	</bean>
 	
 	<bean id="Duty03" class="acme.entities.duties.Duty">
 		<property name="title" value="Título03" />
 		<property name="description" value="Descripción03" />
-		<property name="timePercentage" value="0.6" />
+		<property name="timePercentage" value="60" />
 		<property name="job" ref="Job02"/>
 	</bean>
 	
 	<bean id="Duty04" class="acme.entities.duties.Duty">
 		<property name="title" value="Título04" />
 		<property name="description" value="Descripción04" />
-		<property name="timePercentage" value="0.4" />
+		<property name="timePercentage" value="40" />
 		<property name="job" ref="Job02"/>
 	</bean>
 	
 	<bean id="Duty05" class="acme.entities.duties.Duty">
 		<property name="title" value="Título05" />
 		<property name="description" value="Descripción05" />
-		<property name="timePercentage" value="0.5" />
+		<property name="timePercentage" value="50" />
 		<property name="job" ref="Job03"/>
 	</bean>
 
 	<bean id="Duty06" class="acme.entities.duties.Duty">
 		<property name="title" value="Título06" />
 		<property name="description" value="Descripción06" />
-		<property name="timePercentage" value="0.6" />
+		<property name="timePercentage" value="60" />
 		<property name="job" ref="Job04"/>
 	</bean>
 	
 	<bean id="Duty07" class="acme.entities.duties.Duty">
 		<property name="title" value="Título07" />
 		<property name="description" value="Descripción07" />
-		<property name="timePercentage" value="0.7" />
+		<property name="timePercentage" value="70" />
 		<property name="job" ref="Job04"/>
 	</bean>
 	
 	<bean id="Duty08" class="acme.entities.duties.Duty">
 		<property name="title" value="Título08" />
 		<property name="description" value="Descripción08" />
-		<property name="timePercentage" value="0.8" />
+		<property name="timePercentage" value="80" />
 		<property name="job" ref="Job04"/>
 	</bean>
 	
 	<bean id="Duty09" class="acme.entities.duties.Duty">
 		<property name="title" value="Mirar FaceBook" />
 		<property name="description" value="No es necesario preocuparse por las represalias." />
-		<property name="timePercentage" value="0.6" />
+		<property name="timePercentage" value="60" />
 		<property name="job" ref="Job07"/>
 	</bean>
 	
 	<bean id="Duty10" class="acme.entities.duties.Duty">
 		<property name="title" value="Responder a correos" />
 		<property name="description" value="En nuestra empresa, la comunicación es crucial." />
-		<property name="timePercentage" value="0.25" />
+		<property name="timePercentage" value="25" />
 		<property name="job" ref="Job07"/>
 	</bean>
 	
 	<bean id="Duty11" class="acme.entities.duties.Duty">
 		<property name="title" value="Trabajar mucho" />
 		<property name="description" value="Quien no trabaja, no come." />
-		<property name="timePercentage" value="0.6" />
+		<property name="timePercentage" value="60" />
 		<property name="job" ref="Job08"/>
 	</bean>
 	
 	<bean id="Duty12" class="acme.entities.duties.Duty">
 		<property name="title" value="Trabajar aun más" />
 		<property name="description" value="También tenemos un látigo." />
-		<property name="timePercentage" value="0.8" />
+		<property name="timePercentage" value="80" />
 		<property name="job" ref="Job08"/>
 	</bean>
 	
 	<bean id="Duty13" class="acme.entities.duties.Duty">
 		<property name="title" value="PL/SQL" />
 		<property name="description" value="Creación de la base de datos" />
-		<property name="timePercentage" value="0.25" />
+		<property name="timePercentage" value="25" />
 		<property name="job" ref="Job10"/>
 	</bean>
 	
 	<bean id="Duty14" class="acme.entities.duties.Duty">
 		<property name="title" value="PHP, HTML y JavaScript" />
 		<property name="description" value="Actualizar la página web" />
-		<property name="timePercentage" value="0.75" />
+		<property name="timePercentage" value="75" />
 		<property name="job" ref="Job10"/>
 	</bean>
 	
 	<bean id="Duty15" class="acme.entities.duties.Duty">
 		<property name="title" value="Información y Logística" />
 		<property name="description" value="Infiltrar a nuestros espías, obtener información y organizar nuestras fuerzas." />
-		<property name="timePercentage" value="0.25" />
+		<property name="timePercentage" value="25" />
 		<property name="job" ref="Job12"/>
 	</bean>
 	
 	<bean id="Duty16" class="acme.entities.duties.Duty">
 		<property name="title" value="Batalla" />
 		<property name="description" value="Enfrentarnos a su ejército en campo abierto. Será neesario como distracción para las siguientes fases de nuestra estrategia. Muchos morirán, pero jamás serán olvidados." />
-		<property name="timePercentage" value="0.5" />
+		<property name="timePercentage" value="50" />
 		<property name="job" ref="Job12"/>
 	</bean>
 	
 	<bean id="Duty17" class="acme.entities.duties.Duty">
 		<property name="title" value="Incursión" />
 		<property name="description" value="Nuestros soldados más capaces se infiltrarán en su base, con objetivo de localizar y, posteriormente, neutralizar al enemigo." />
-		<property name="timePercentage" value="0.15" />
+		<property name="timePercentage" value="15" />
 		<property name="job" ref="Job12"/>
 	</bean>
 	
 	<bean id="Duty18" class="acme.entities.duties.Duty">
 		<property name="title" value="Liberación" />
 		<property name="description" value="Asesinar a Dalas Review, El Tirano, y pasar a la historia como los Héroes que salvaron al mundo de sus tiempos más oscuros." />
-		<property name="timePercentage" value="0.1" />
+		<property name="timePercentage" value="10" />
 		<property name="job" ref="Job12"/>
 	</bean>
 	

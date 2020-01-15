@@ -1,0 +1,17 @@
+#Employer - Duty
+
+#List.jsp
+
+employer.duty.list.label.title				= Title
+employer.duty.list.label.time-percentage	= Time percentage
+
+#Form.jsp
+
+employer.duty.form.label.title 				= Title:
+employer.duty.form.label.description 		= Description:
+employer.duty.form.label.time-percentage	= Time percentage:
+
+employer.duty.form.button.create 			= Create
+employer.duty.form.button.update			= Update
+employer.duty.form.button.delete			= Delete
+employer.duty.form.button.return			= Return
