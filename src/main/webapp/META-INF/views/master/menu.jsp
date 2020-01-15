@@ -52,18 +52,6 @@
 			<acme:menu-suboption code="master.menu.announcement.all" action="/administrator/announcement/list" access="hasRole('Administrator')"/>
 			<acme:menu-suboption code="master.menu.announcement.create" action="/administrator/announcement/create" access="hasRole('Administrator')"/>
 		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.offer" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.offer.active-offers" action="/authenticated/offer/list-active" access="!hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.offer.active-offers" action="/consumer/offer/list-active" access="hasRole('Consumer')"	/>
-			<acme:menu-suboption code="master.menu.offer.create" action="/consumer/offer/create" access="hasRole('Consumer')"/>
-    	</acme:menu-option>
-    
-        <acme:menu-option code="master.menu.request" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.request.active-requests" action="/authenticated/request/list-active" access="!hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.request.active-requests" action="/provider/request/list-active" access="hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.request.create" action="/provider/request/create" access="hasRole('Provider')"/>
-    	</acme:menu-option>
 
 		<acme:menu-option code="master.menu.company-record" access="isAuthenticated()">
 			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
@@ -122,20 +110,8 @@
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
 
-		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>
-
-		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
-		</acme:menu-option>	
-
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-data" action="/authenticated/user-account/update"/>
-			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.provider" action="/authenticated/provider/update" access="hasRole('Provider')"/>
-			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRole('Consumer')"/>
-			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-employer" action="/authenticated/employer/create" access="!hasRole('Employer')"/>
 			<acme:menu-suboption code="master.menu.user-account.employer" action="/authenticated/employer/update" access="hasRole('Employer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-worker" action="/authenticated/worker/create" access="!hasRole('Worker')"/>
