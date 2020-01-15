@@ -87,12 +87,6 @@
 			<acme:menu-suboption code="master.menu.application.employer.list-by-status" action="/employer/application/list-by-status" access="hasRole('Employer')" />
 		</acme:menu-option>
 		
-		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.commercial-banner.list" action="/administrator/commercial-banner/list"/>
-			<acme:menu-suboption code="master.menu.non-commercial-banner.list" action="/administrator/non-commercial-banner/list"/>
-			<acme:menu-suboption code="master.menu.commercial-banner.create" action="/administrator/commercial-banner/create"/>
-			<acme:menu-suboption code="master.menu.non-commercial-banner.create" action="/administrator/non-commercial-banner/create"/>
-		</acme:menu-option>
 	</acme:menu-left>
 	
 
